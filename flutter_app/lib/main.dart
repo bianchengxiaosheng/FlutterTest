@@ -7,24 +7,95 @@ void main() => runApp(MyApp());
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
+    Color color = Theme.of(context).primaryColor;
+    Widget buttonSection = Container(
+      child: Row(
 
-    return new MaterialApp(
-      title: "FlutterTest",
-      theme: new ThemeData(
-        primaryColor: Colors.white
+        mainAxisAlignment:MainAxisAlignment.spaceEvenly ,
+        children: <Widget>[
+          _buildButtonColumn(color, Icons.call, "CALL"),
+          _buildButtonColumn(color, Icons.near_me, "ROUTE"),
+          _buildButtonColumn(color, Icons.share, "SHARE")
+        ],
       ),
+
+    );
+    return new MaterialApp(
+      title: "布局测试",
       home: new Scaffold(
         appBar: new AppBar(
-          title: new Text("TXT"),
+          title: new Text("布局测试"),
         ),
-        body: new Center(
-          child: new RandomWords(),
-        ),
+        body:Column(
+          children: <Widget>[
+            titleSection,
+            buttonSection
+          ],
+        )
       ),
     );
   }
   
 }
+
+
+Column _buildButtonColumn(Color color,IconData icon,String label){
+  return Column(
+      mainAxisSize: MainAxisSize.min,
+      mainAxisAlignment: MainAxisAlignment.center,
+    children: <Widget>[
+      Icon(icon,color: color),
+      Container(
+        margin: const EdgeInsets.only(top: 8),
+        child: Text(
+          label,
+          style: TextStyle(
+            fontSize: 12,
+            fontWeight: FontWeight.w400,
+            color: color
+          ),
+        ),
+      ),
+    ],
+  );
+}
+Widget titleSection = new Container(
+  padding: const EdgeInsets.all(32.0),
+  child: new Row(
+    children: <Widget>[
+      new Expanded(
+          child: new Column(
+            crossAxisAlignment: CrossAxisAlignment.start,
+            children: <Widget>[
+              new Container(
+                padding: const EdgeInsets.only(bottom: 8.0),
+                child: new Text(
+                  'Oeschinen Lake Campground',
+                  style: new TextStyle(
+                    fontWeight: FontWeight.bold,
+                  ),
+                ),
+              ),
+              new Text(
+                'Kandersteg, Switzerland',
+                style: new TextStyle(
+                  color: Colors.grey[500],
+                ),
+              ),
+
+            ],
+          )
+      ),
+      new Icon(
+        Icons.star,
+        color: Colors.red[500],
+      ),
+      new Text('41'),
+
+    ],
+  ),
+);
+
 class RandomWords extends StatefulWidget{
   @override
   createState() => new RandomWordsState();
