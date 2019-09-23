@@ -9,6 +9,11 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     Color color = Theme.of(context).primaryColor;
     Widget buttonSection = Container(
+      decoration: BoxDecoration(
+          border: Border(
+            top: BorderSide(width: 1.0,color: Colors.grey)
+          )
+      ),
       //alignment: new FractionalOffset(0.0, 0.0),
       child: Row(
 
@@ -54,8 +59,6 @@ Column _buildButtonColumn(Color color,IconData icon,String label){
       mainAxisAlignment: MainAxisAlignment.center,
 
     children: <Widget>[
-
-
       Icon(icon,color: color),
       Container(
 
@@ -63,14 +66,13 @@ Column _buildButtonColumn(Color color,IconData icon,String label){
         child: Text(
           label,
           style: TextStyle(
-            fontSize: 12,
-            fontWeight: FontWeight.w400,
-            color: color
+              fontSize: 12,
+              fontWeight: FontWeight.w400,
+              color: color
           ),
-
         ),
+      )
 
-      ),
     ],
   );
 }
