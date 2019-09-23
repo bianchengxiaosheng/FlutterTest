@@ -9,13 +9,17 @@ class MyApp extends StatelessWidget {
   Widget build(BuildContext context) {
     Color color = Theme.of(context).primaryColor;
     Widget buttonSection = Container(
+      //alignment: new FractionalOffset(0.0, 0.0),
       child: Row(
 
         mainAxisAlignment:MainAxisAlignment.spaceEvenly ,
         children: <Widget>[
-          _buildButtonColumn(color, Icons.call, "CALL"),
-          _buildButtonColumn(color, Icons.near_me, "ROUTE"),
-          _buildButtonColumn(color, Icons.share, "SHARE")
+          _buildButtonColumn(color, Icons.book, "BookShelf"),
+          _buildButtonColumn(color, Icons.add, "AddNew"),
+
+          _buildButtonColumn(color, Icons.settings, "Settting"),
+
+
         ],
       ),
 
@@ -23,15 +27,20 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: "布局测试",
       home: new Scaffold(
-        appBar: new AppBar(
+
+          appBar: new AppBar(
           title: new Text("布局测试"),
         ),
         body:Column(
+
           children: <Widget>[
             titleSection,
-            buttonSection
+
           ],
-        )
+
+        ),
+        bottomNavigationBar: buttonSection,//显示在页面底部的导航栏
+
       ),
     );
   }
@@ -43,9 +52,13 @@ Column _buildButtonColumn(Color color,IconData icon,String label){
   return Column(
       mainAxisSize: MainAxisSize.min,
       mainAxisAlignment: MainAxisAlignment.center,
+
     children: <Widget>[
+
+
       Icon(icon,color: color),
       Container(
+
         margin: const EdgeInsets.only(top: 8),
         child: Text(
           label,
@@ -54,7 +67,9 @@ Column _buildButtonColumn(Color color,IconData icon,String label){
             fontWeight: FontWeight.w400,
             color: color
           ),
+
         ),
+
       ),
     ],
   );
