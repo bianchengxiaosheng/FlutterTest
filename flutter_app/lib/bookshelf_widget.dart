@@ -39,17 +39,24 @@ Widget _buildItemRow(String label){
             ),
           ),
         ),
-
-        Text(
-          label + "kksdfsdhgksdhg",
-          style: TextStyle(
-              fontSize: 10
-          ),
-        ),
         Container(
-          width: 50,
-          height: 50,
+          width: 220,
+
+          child:    Text(
+             "Content sdjfkj",
+            style: TextStyle(
+                fontSize: 10
+            ),
+          ),
+
+        ),
+
+        Container(
+          width: 60,
+          height: 60,
+          alignment: Alignment.centerRight,
           color: Colors.red,
+          child: Text("DEL")
         )
 
       ],

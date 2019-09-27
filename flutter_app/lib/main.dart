@@ -1,8 +1,9 @@
 import 'package:english_words/english_words.dart' as prefix0;
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
-import 'bookshelf_panel.dart';
-
+import 'bookshelf_widget.dart';
+import 'find_new_book_widget.dart';
+import 'setting_widget.dart';
 void main() => runApp(MyApp());
 
 class MyApp extends StatelessWidget {
@@ -33,15 +34,15 @@ class MyApp extends StatelessWidget {
     return new MaterialApp(
       title: "布局测试",
       home: new Scaffold(
-
           appBar: new AppBar(
           title: new Text("布局测试"),
         ),
         body:Stack(
 
           children: <Widget>[
-            bookshelf_container(),
-
+            //bookshelf_container(),
+            //find_new_book_container()
+            setting_container()
           ],
 
         ),
