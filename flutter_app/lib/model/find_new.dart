@@ -3,6 +3,7 @@ import 'package:json_annotation/json_annotation.dart';
 part 'find_new.g.dart';
 //代码生成地址https://caijinglong.github.io/json2dart/index_ch.html
 
+
 @JsonSerializable()
 class FindNew extends Object {
 
