@@ -18,13 +18,7 @@ class MyApp extends StatelessWidget {
         appBar: new AppBar(
           title: new Text("布局测试"),
         ),
-        body: Stack(
-          children: <Widget>[
-            //bookshelf_container(),
-            find_new_book_container()
 
-          ],
-        ),
         bottomNavigationBar: BottomTabs(), //显示在页面底部的导航栏
       ),
     );
@@ -48,7 +42,7 @@ class BottomTabs extends StatelessWidget{
             return BookshelfWidget();
             break;
           case 1:
-            return find_new_book_container();
+            return FinNewBookWidget();
             break;
           case 2:
             return setting_container();
