@@ -2,9 +2,9 @@ import 'package:english_words/english_words.dart' as prefix0;
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:english_words/english_words.dart';
-import 'bookshelf_widget.dart';
-import 'find_new_book_widget.dart';
-import 'setting_widget.dart';
+import 'widget/bookshelf/bookshelf_widget.dart';
+import 'widget/findnew/find_new_book_widget.dart';
+import 'widget/setting/setting_widget.dart';
 
 void main() => runApp(MyApp());
 
@@ -45,7 +45,7 @@ class BottomTabs extends StatelessWidget{
       tabBuilder:(BuildContext context,int index){
         switch(index){
           case 0:
-            return bookshelf_container();
+            return BookshelfWidget();
             break;
           case 1:
             return find_new_book_container();
