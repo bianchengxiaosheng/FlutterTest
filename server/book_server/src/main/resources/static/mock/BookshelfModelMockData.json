@@ -1,0 +1,30 @@
+{
+  "data": [
+    {
+      "bookName": "我的祖国",
+      "describe": "通过引入简单的模型类来解决上面提到的问题",
+      "detail": "通过这种方法，调用代码 可以拥有类型安全，name 和 email 字段的自动完成以及编译时异常（检测）。如果你发生了笔误或者把 String 类型的字段看成了 int 类型，App 将不会编译，而不是在运行时崩溃"
+    },
+    {
+      "bookName": "我的祖国2",
+      "describe": "通过引入简单的模型类来解决上面提到的问题",
+      "detail": "通过这种方法，调用代码 可以拥有类型安全，name 和 email 字段的自动完成以及编译时异常（检测）。如果你发生了笔误或者把 String 类型的字段看成了 int 类型，App 将不会编译，而不是在运行时崩溃"
+    },
+    {
+      "bookName": "我的祖国3",
+      "describe": "通过引入简单的模型类来解决上面提到的问题",
+      "detail": "通过这种方法，调用代码 可以拥有类型安全，name 和 email 字段的自动完成以及编译时异常（检测）。如果你发生了笔误或者把 String 类型的字段看成了 int 类型，App 将不会编译，而不是在运行时崩溃"
+    },
+    {
+      "bookName": "我的祖国4",
+      "describe": "通过引入简单的模型类来解决上面提到的问题",
+      "detail": "通过这种方法，调用代码 可以拥有类型安全，name 和 email 字段的自动完成以及编译时异常（检测）。如果你发生了笔误或者把 String 类型的字段看成了 int 类型，App 将不会编译，而不是在运行时崩溃"
+    },
+    {
+      "bookName": "Flutter",
+      "describe": " We think Flutter will help you create beautiful, fast apps, with a productive, extensible and open development model.",
+      "detail": "Flutter is Google's mobile app SDK for crafting high-quality native interfaces on iOS and Android in record time. Flutter works with existing code, is used by developers and organizations around the world, and is free and open source"
+    }
+  ]
+
+}
